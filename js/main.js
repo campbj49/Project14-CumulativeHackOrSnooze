@@ -42,7 +42,6 @@ async function start() {
 
   // if we got a logged-in user
   if (currentUser) updateUIOnUserLogin();
-  test();
 }
 
 // Once the DOM is entirely loaded, begin the app
@@ -52,11 +51,3 @@ console.warn("HEY STUDENT: This program sends many debug messages to" +
   " seeing those helpful debug messages. In your browser console, click on" +
   " menu 'Default Levels' and add Verbose");
 $(start);
-
-//placeholder function for testing functions before they go into the UI
-async function test(){
-  //test newly made functions
-
-}
-
-$body.on("click",()=>console.log(currentUser.favorites))

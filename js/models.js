@@ -132,11 +132,11 @@ class User {
 
       this.favorites.push(response.data.story);
 
-      console.log(await axios({
+      await axios({
         url:`${BASE_URL}/users/${this.username}/favorites/${id}`,
         method:"POST",
         data:{token:this.loginToken},
-      }))
+      })
     }
   }
 
@@ -147,11 +147,11 @@ class User {
     let index = this.findFavoriteIndex(id);
     if(index != undefined){
       //remove storyID from API and current object
-      console.log(await axios({
+      await axios({
         url:`${BASE_URL}/users/${this.username}/favorites/${id}`,
         method:"DELETE",
         data:{token:this.loginToken},
-      }))
+      })
       let fav = this.favorites;
       this.favorites = fav.slice(0,index).concat(fav.slice(index+1,fav.length));  
     }

@@ -96,7 +96,7 @@ async function deleteStory(id){
 /** Event listener to add and remove the favorite property from stories */
 async function listHandler(evt){
   let star = evt.target;
-  console.log(star.className);
+  
   if(star.className ==="star"){
     let storyID = star.parentElement.id;
     if(star.innerText === "★"){
